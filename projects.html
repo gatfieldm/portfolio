@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class = "main-nav">
+                <li><a href="index.html" class = "nav-button">About Me</a></li>
+                <li><a id = "active" href="projects.html" class = "nav-button">Projects</a></li>
+            </ul>
+        </nav>
+        <h1 id = "projects-h1">Projects</h1>
+    </header>
+    <section class = "projects-nav-section">
+        <nav>
+            <ul class = "projects-nav">
+                <li><a href="#dbms" class = "nav-button2">DBMS</a></li>
+                <li><a href="#data-analysis" class = "nav-button2">Data Analysis</a></li>
+                <li><a href="#Implementation" class = "nav-button2">Implementation</a></li>
+            </ul>
+        </nav>
+        <button id="toggleButton">Expand Category Filter</button>
+    </section>
+    <div class = "projects-section DBMS-projects" id = "dbms">
+        <h2 id = "dbms-heading">DBMS Projects</h2>
+        <div class = "java">
+            <h3>Java Application to Run and Store DBMS Queries</h3>
+            <!-- add image here -->
+             <div class = "java-img">
+                <img src = "images/jdbc.png" alt = "JDBC linking Java and DB">
+            </div>
+            <h4><strong>Technologies Used: </strong>Java, SQL (Oracle), JDBC</h4>
+            <h4><strong>Summary:</strong> Developed a Java Application which executes SQL queries against a relational database and places the results in special data structures.</h4>
+            <h4><strong>Background and Premise: </strong> </h4>
+                <p>This project uses a fictional Facebook-like database with tables that stores different types of user data, including location, friends, educational history, tagged photos, etc. Because the contents of the database were organized in differing data forms, I was to create efficient Java functions that both extracted and stored the results into their appropriate structures. The task of querying this database through Java required relevant knowledge of the schema of the database and a familiarity of the methods of Java Database Connectivity. Nine queries were performed on the database, each ranging in complexity. Statements and ResultSet operations were among the most widely employed throughout the project.</p>
+            
+        <h4><strong>Results:</strong></h4>
+        <ul>
+            <p id= "ul-head">Completion of the following complex queries:</p>
+            <li>Returned the top "num" pairs of users with the most mutual friends who are not friends themselves.</li>
+            <li>Returned pairs of "unrealized" friendships in which the following conditions had to be met:</li>
+            <ul>
+                <li>The two users are the same gender</li>
+                <li>The two users are tagged in at least one common photo</li>
+                <li>The two users are not friends</li>
+                <li>The difference in the two users' birth years is less than or equal to "yearDiff"</li>
+            
+            </ul>
+            <p>*Results were sorted in descending order by number of photos tagged together.</p>
+            <li>Returned the top "num" photos with the most tagged users sorted in descending order by the number of tagged users.</li>
+        </ul>
+        </div> 
+        <div class = "mongodb">
+            <h3>MongoDB Collection Creation with JSON Input</h3>
+            <div class = "mongodb-img">
+                <img src = "images/mongodb.jpg" alt = "MongoDB Logo">
+            </div>
+            <h4><strong>Technologies Used: </strong>JSON file generation, MongoDB</h4>
+            <h4><strong>Summary:</strong> Created a JSON file that was used to populate a MongoDB collection, and perform queries on the data.</h4>
+            <h4><strong>Background and Premise: </strong> </h4>
+                <p>This project used the same schema as the database used in the <i>JDBC Project</i>, but with different goals and concepts. In this project, I extracted data from tables in the Facebook-like database and exported a JSON file output.json that contained information about the users. Then, I used that JSON file (and others generated of the same format), into MongoDB to create a MongoDB collection of users. These tasks allowed me to feel comfortable with the processes of loading data and querying results from a NoSQL database manager as it differs from SQL DBMS.</p>
+            <h4><strong>Results:</strong></h4>
+            <ul>
+                <li>Successful creation and writing of JSON file to disk via FileWriter</li> <li>Used JSONObjects, JSONArrays to select and store data of different tables</li>
+                <li>Incorporated successful programming logic to query data of tables and store them properly, in order, with the user data</li>
+            </ul>
+            <ul>
+                <p id = "ul-head">Completion of the following complex queries:</p>
+                <li>Found the average number of friends a user has in the users collection and returned as a decimal number</li>
+                <li>Implement the mapper, reducer and finalizer of MapReduce to find the number of users born in each month</li>
+                <li>Returned a JSON array of pairs of users that met the following requirements:</li>
+                    <ul>
+                    <li>user A is "male" and user B is "female"</li>
+                    <li>the difference between their year of births (YOB) is less than the specified "year_diff"</li>
+                    <li>user A and user B are not friends</li>
+                    <li>user A and user B are from the same hometown city</li>
+                </ul>
+            </ul>
+        </div>
+        
+    </div>
+    <div class = "projects-section data-analysis-projects" id = "data-analysis">
+        <h2 id = "data-analysis-heading">Data Analysis Projects</h2>
+        <div class = "Detroit">
+            <h3>Detroit Crime Data Exploration</h3>
+            <div class = "detroit-img">
+                <img src = "images/detroit1.png" alt = "Detroit Crime Project Image" id = "wide">
+                <img src = "images/detroit2.png" alt = "Detroit Crime Project Image">
+            </div>
+            <h4><strong>Technologies Used: </strong>Python, Pandas, Matplotlib, Folium, iPywidgets</h4>
+            <h4><strong>Summary:</strong> Analyzed and visualized crime data in Detroit, Michigan to identify trends and patterns.</h4>
+            <h4><strong>Background and Premise: </strong> </h4>
+                <p>For this project, I used a public dataset that contained information about crimes that occurred in Detroit, Michigan from the last 20 years. The dataset was large and contained information about the type of crime, the location of the crime, the date and time of the crime, and other relevant information. I used Python and various libraries to analyze and visualize the data in order to identify trends and patterns. I used Pandas to clean and manipulate the data, Matplotlib to create visualizations, Folium to create interactive maps (notably heat maps), and iPywidgets to create interactive widgets.</p>
+            <h4><strong>Results:</strong></h4>
+            <ul>
+                <li>Identified the most common types of crimes in Detroit</li>
+                <li>Created heatmaps the most dangerous areas in Detroit</li>
+                <li>Created maps and charts grouped by year, then by crime</li>
+                <li>Identified trends and patterns in the data</li>
+                <li>Successful implementation of user-customizable widgets for easier visualization</li>
+            </ul>
+        </div>
+       
+        <div class = "tornado">
+            <h3>Impact of Elevation on the Frequency and Intensity of Tornadoes</h3>
+            <div class = "tornado-img">
+                <img src = "images/tornado1.png" alt = "Tornado Image">
+                <img src = "images/tornado2.png" alt = "Tornado Image">
+                <img src = "images/tornado3.png" alt = "Tornado Image">
+            </div>
+            <h4><strong>Technologies Used: </strong>Python, Pandas, CartoPy, Osgeo, Gdal</h4>
+            <h4><strong>Summary:</strong>Performed extensive research into the behavior of U.S. tornadoes with heavy mapping and statistical analysis.</h4>
+            <h4><strong>Background and Premise: </strong> </h4>
+            <p>In a group of four, this month-long project consisted of three main parts, examining the .csv data from the National Oceanic and Atmospheric Administration (NOAA), detailing tornadoes in the United States recorded from 1950-2023. First, we inspected the dataset as a whole, and categorized the periodic behavior of tornadoes to reveal any trends or patterns. This included linear regression among other statistical methods. Secondly, to measure the impact of elevation on the intensity and frequency of tornadoes, we performed a small-scale study only on the tornadoes in Texas, from which we categorized three levels of elevation to compare. Thirdly, we corroborated our Texas conclusions on the national scale through gdal geographic mapping and data analysis.</p>
+            <h4><strong>Results:</strong></h4>
+            <ul>
+                <li>Research, planned and assembled a large three-part report with supporting sources and background in the form of Jupyter Notebooks</li>
+                <li>Employed heavy use of Pandas built-in functions to parse and analyze data</li>
+                <li>Utilized CartoPy to create maps of tornadoes in Texas and the United States</li>
+                <li>Used Osgeo and Gdal to create hi-res plots to study the impact of elevation on tornadoes</li>
+                <li>Conducted linear regression and statistical analysis to identify trends in tornado behavior</li>
+            </ul>
+        </div>
+    </div>
+    <div class = "projects-section Implementation-projects" id = "Implementation">
+        <h2 id = "Implementation-heading">Implementation Projects</h2>
+        <div class = "grace-hash-join">
+            <h3>Implementation of Grace-Hash Join in OOP Environment</h3>
+            <div class = "ghj-img">
+                <img src = "images/ghj.png" alt = "Hash Join Image">
+            </div>
+            <p class= "photo-caption">Image Source:  <a href = "https://www.cse.unsw.edu.au/~cs9315/21T1/lectures/join-hash/slides.html#s6">UNSW</a></p>
+            <h4><strong>Technologies Used: </strong>C++, Relational DBMS</h4>
+            <h4><strong>Summary:</strong> Emulated the Grace Hash Join Algorithm for relational databases in C++.</h4>
+            <h4><strong>Background and Premise: </strong> </h4>
+            <p>Grace Hash Join is a join algorithm that is used to join two relations in a database. It is a disk-based join algorithm that is used when the relations are too large to fit in memory. The algorithm has two main phases: partition and probe. In the partition phase, the algorithm partitions the relations into buckets based on a hash function. In the probe phase, the algorithm probes the buckets to find matching tuples and re-hashes if necessary. In this project, I implemented the partition and probe functions of the Grace Hash Join algorithm in C++. I was given starter files that simulated the data flow of records in disk and memory and performed a join operation between two relations.</p>
+            <h4><strong>Results:</strong></h4>
+            <ul>
+                <li>Implemented the partition and probe functions of the Grace Hash Join algorithm in C++</li>
+                <li>Successfully joined two relations using the Grace Hash Join algorithm</li>
+                <li>Tested the implementation with different input sizes and configurations</li>
+                <li>Optimized the implementation for performance and efficiency</li>
+                <li>Proved the ability to implement a join algorithm in an OOP environment based on its written description and purpose</li>
+        </div>
+        <div class = "bank-simulator">
+            <h3>Bank Transaction Simulator</h3>
+            <h4><strong>Technologies Used: </strong>C++ (Queues, Unordered Sets and Maps)</h4>
+            <h4><strong>Summary:</strong> Simulated a bank transaction system using queues and unordered sets and maps in C++.</h4>
+            <h4><strong>Background and Premise: </strong> </h4>
+            <p>The bank wire transfer simulator project I completed aimed to provide practical experience in selecting and utilizing appropriate data structures in C++. The project involved simulating the operations of a bank's wire transfer system, requiring the efficient handling of various data processing tasks. These tasks including login, logout, and placing transactions. I used queues, unordered maps, and unordered sets to manage and optimize these tasks effectively, and simulate bank "feeing" logic, all while correctly updating user information and history. The program was also able to point out invalid or corrupted transaction requests and give daily summaries of transactions that occurred. The successful completion of this project demonstrated my ability to apply theoretical knowledge of data structures to solve real-world problems efficiently, showcasing proficiency in C++ programming and algorithm design.</p>
+            <h4><strong>Results:</strong></h4>
+            <ul>
+                <li>Implemented a bank transaction simulator in C++</li>
+                <li>Demonstrated knowledge of std::unordered_map and std::queue</li>
+                <li>Simulated login, logout, and transaction operations</li>
+                <li>Tested the program with valid as well as invalid transaction request files</li>
+                <li>Implemented scalable fee system and error handling</li>
+        </div>
+    </div>
+        <script src="script.js"></script>
+        <footer>
+            <p>&copy; 2024 Mason Gatfield</p>
+        </footer>
+</body>
+
+</html>
