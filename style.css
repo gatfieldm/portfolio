@@ -159,8 +159,8 @@ p {
 .projects-section {
     margin-bottom: 40px;
     margin-top: 5px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 20px;
     padding-top: 10px;
     border-radius: 8px;
@@ -235,7 +235,7 @@ p {
     width: 250px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px 20px; /* Adjust padding for size */
-    margin-left: 15px;
+    margin-left: 50px;
     background: linear-gradient(to right, #3498db, #2980b9); /* Gradient background */
     color: #fff; /* White text color */
     padding-bottom: 10px;
@@ -359,6 +359,9 @@ div[class$="-img"] {
     background-color: #505f78;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 3px solid white;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 50px;
 }
 
 .about-section h2 {
@@ -371,4 +374,14 @@ div[class$="-img"] {
 
 .welcome-heading {
     padding-bottom: 50px;
+}
+
+.profile-img {
+    img{
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
 }
